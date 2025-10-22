@@ -19,19 +19,19 @@ from monai.losses import DiceCELoss
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--dataset_name', type=str, default='lab_100_lr_0.001_test_5%_ImageCAS', help='dataset_name')
-parser.add_argument('--root_path', type=str, default='/home/prohibit/MagicNet-main/CAS', help='Name of Dataset')
+parser.add_argument('--dataset_name', type=str, default='lr_0.001_test_5%_Parse2022', help='dataset_name')
+parser.add_argument('--root_path', type=str, default='/home/prohibit/DiCo', help='Name of Dataset')
 parser.add_argument('--exp', type=str, default='C+V', help='exp_name')
 parser.add_argument('--model', type=str, default='V-Net', help='model_name')
 parser.add_argument('--max_iteration', type=int, default=40000, help='maximum iteration to train')
-parser.add_argument('--total_samples', type=int, default=890, help='total samples of the dataset')
-parser.add_argument('--max_train_samples', type=int, default=850, help='maximum samples to train')
-parser.add_argument('--max_test_samples', type=int, default=40, help='maximum samples to test')
+parser.add_argument('--total_samples', type=int, default=100, help='total samples of the dataset')
+parser.add_argument('--max_train_samples', type=int, default=90, help='maximum samples to train')
+parser.add_argument('--max_test_samples', type=int, default=10, help='maximum samples to test')
 parser.add_argument('--labeled_bs', type=int, default=1, help='batch_size of labeled data per gpu')
 parser.add_argument('--batch_size', type=int, default=2, help='batch_size per gpu')
 parser.add_argument('--base_lr', type=float, default=0.001, help='maximum epoch number to train')
 parser.add_argument('--deterministic', type=int, default=1, help='whether use deterministic training')
-parser.add_argument('--labelnum', type=int, default=100, help='labeled trained samples')
+parser.add_argument('--labelnum', type=int, default=5, help='labeled trained samples')
 parser.add_argument('--seed', type=int, default=1337, help='random seed')
 parser.add_argument('--lamda', type=float, default=0.2, help='weight to balance all losses')
 parser.add_argument('--ema_decay', type=float, default=0.99, help='ema_decay')
@@ -41,9 +41,9 @@ parser.add_argument('--consistency_rampup', type=float, default=200.0, help='con
 parser.add_argument('--T_dist', type=float, default=1.0, help='Temperature for organ-class distribution')
 parser.add_argument('--gpu', type=str, default='0', help='GPU to use')
 parser.add_argument('--txt_path', type=str,
-                    default='/home/prohibit/DiCo-code/data/ImageCAS.txt',
+                    default='/home/prohibit/DiCo/data/Parse2022.txt',
                     help='dataset_txt_position')
-parser.add_argument('--datasets', type=str, default='imageCAS', help='datasets')  # imageCAS,N_cas2023,parse2022,SEG_A
+parser.add_argument('--datasets', type=str, default='parse2022', help='datasets')  # imageCAS,N_cas2023,parse2022,SEG_A
 args = parser.parse_args()
 
 
