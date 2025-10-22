@@ -43,7 +43,7 @@ parser.add_argument('--gpu', type=str, default='0', help='GPU to use')
 parser.add_argument('--txt_path', type=str,
                     default='/home/prohibit/DiCo/data/Parse2022.txt',
                     help='dataset_txt_position')
-parser.add_argument('--datasets', type=str, default='parse2022', help='datasets')  # imageCAS,N_cas2023,parse2022,SEG_A
+parser.add_argument('--datasets', type=str, default='parse2022', help='datasets')  # imageCAS,N_cas2023,parse2022
 args = parser.parse_args()
 
 
