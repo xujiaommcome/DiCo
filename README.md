@@ -24,6 +24,10 @@ The datasets used in our paper are [ImageCAS dataset](https://www.kaggle.com/dat
 and [CAS2023 dataset](https://codalab.lisn.upsaclay.fr/competitions/9804).
 
 ### Training Steps
+
+**Note:** Please replace the original `unetr.py` in the MONAI library with `code/networks/unetr.py` from this repository.  
+For more details, please refer to issue #4.
+
 1. Clone the repo and create data path:
 ```
 git clone https://github.com/xujiaommcome/DiCo
