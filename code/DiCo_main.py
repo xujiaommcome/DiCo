@@ -179,7 +179,7 @@ def train(train_list, test_list, fold_id=1):
     ], lr=base_lr)
 
     optimizer1 = torch.optim.AdamW([
-        {'params': model.parameters()},
+        {'params': model1.parameters()},
     ], lr=base_lr)
 
     Dopt = torch.optim.Adam(D_2d.parameters(), lr=1e-4, betas=(0.9, 0.99))
@@ -396,3 +396,4 @@ if __name__ == "__main__":
 
     logging.getLogger().removeHandler(handler)
     logging.getLogger().removeHandler(sh)
+
